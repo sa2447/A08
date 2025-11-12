@@ -35,13 +35,7 @@ h1, h2, h3, p, ul {
 }
 h1 {
 	font-size: 150%;
-	& img 
-	{
-		min-width: 100px;
-		max-width: 250px;
-		width: 100%;
-		height: auto;
-	}	
+	
 }
 h2 {
 	font-size: 130%;
@@ -73,10 +67,7 @@ header {
 		float: left;
 		margin: .75em 1em;
 		
-		min-width: 40px;
-		max-width: 80px;
-		width: 100%;
-		height: auto;
+		width: clamp(40px, 15%, 80px);
 	}
 }
 
@@ -91,6 +82,8 @@ main {
 		padding-left: 1em;
 	}
 	& img {
+
+		width: clamp(40px, 50%, 75px);
 		border: 4px double var(--accent-color);
 		border-radius: 10px;
 	}
@@ -106,13 +99,8 @@ section{
 
 	& img {
 		float: right;
-		& img 
-		{
-			min-width: 75px;
-			max-width: 40px;
-			width: 100%;
-			height: auto;
-		}
+		width: clamp(100px, 50%, 250px);
+
 		
 	};
 }
